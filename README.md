@@ -3,16 +3,24 @@
 Este projeto automatiza a coleta de preços de produtos em sites usando Python e Selenium, salvando os dados em uma planilha Excel.
 
 
-## 🚀 Como usar
+## 🚀 Como usar:
 
+Clone este repositório:
 
-Instale as dependências:
+ git clone https://github.com/EdilsonLima/Manipula-o_de_Dados.git
+
+Entre na pasta do projeto:
+
+ cd Manipula-o_de_Dados
+
+Instale as dependências necessárias:
 
  pip install selenium pandas openpyxl webdriver-manager
 
 Execute o script:
 
  python produtos_est.py
+
 
  ## 🧰 Tecnologias
 
