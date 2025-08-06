@@ -13,14 +13,14 @@ urls = ['https://store.vonixx.com.br/lava-autos',
        'https://store.vonixx.com.br/descontaminacao',
         'https://store.vonixx.com.br/acessorios']
 
-#Percorre todoas as urls passadas.
+#Percorre todas as urls passadas.
 for url in urls:
     navegador.get(url)
     sleep(3)
 
     produtos = navegador.find_elements(By.XPATH, '//li[contains(@class,"item")]')
 
-    # Loop para percorrer e slavar todos os profutos dentro da lista [itens].
+    # Loop para percorrer e salvar todos os produtos dentro da lista [itens].
     for produto in produtos:
         try:
             titulo = produto.find_element(By.XPATH, './/div[contains(@class,"product-name")]').text.strip()
@@ -29,15 +29,15 @@ for url in urls:
         except Exception as e:
             continue  # Mesmo que não tenha Título ou Preço vai seguir.
 
-#Deixa o navegador em tela cheiaa.
+#Deixa o navegador em tela cheia.
 navegador.maximize_window()
 
-#Espera o navegar carregar.
+#Espera o navegador carregar.
 sleep(5)
 
 print(f'Foram encontrados: {len(itens)} produtos e adicionados a lista.')
 
-#Lopp para moficiar todos os produtos encontrados.
+#Lopp para modificar todos os produtos encontrados.
 for item in itens:
     print(f'{item["Produto"]}  {item["Valor"]}')
 
